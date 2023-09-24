@@ -1,7 +1,8 @@
+import unittest
+
 from base_test import BaseTestCase
 from homepage import HomePage
 from subscriptionpage import SubscriptionPage
-import unittest
 
 
 class TestSignUp(BaseTestCase):
@@ -9,13 +10,13 @@ class TestSignUp(BaseTestCase):
         # Step 1A: Go to the ABCmouse website
         home_page = HomePage(self.driver, self.url)
         home_page.open()
-        #
-        # # Step 1B: Bypass the human check
-        # captcha = self.driver.find_element_by_id("captcha")
-        # if captcha.is_displayed():
-        #     # Handle captcha (long press 'PRESS & HOLD')
-        #     home_page.test_press_and_hold_captcha()
-        #
+
+        # Step 1B: Bypass the human check
+        #captcha = self.driver.find_element(By.ID, '#px-captcha')
+        #if captcha.is_displayed():
+        #    # Handle captcha (long press 'PRESS & HOLD')
+        #    home_page.test_press_and_hold_captcha()
+
         # Step 2: Click the "Sign Up" button
         home_page.click_sign_up()
 
